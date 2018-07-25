@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "upload.path",
+      "type": "java.lang.String",
+      "description": "Description for upload.path."
+    },
+    {
+      "name": "values.string.project_name",
+      "type": "java.lang.String",
+      "description": "Description for values.string.project_name."
+    },
+    {
+      "name": "values.string.activation_link",
+      "type": "java.lang.String",
+      "description": "Description for values.string.activation_link."
+    }
+  ] }

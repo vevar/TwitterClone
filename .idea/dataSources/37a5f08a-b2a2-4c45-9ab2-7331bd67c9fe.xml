@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sweater@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="sweater">
+      <ObjectId>93200</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-07-23.21:03:40.633</IntrospectionTimestamp>
+      <IntrospectionStateNumber>14409</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="hibernate_sequence">
+      <ObjectId>93209</ObjectId>
+      <StateNumber>14396</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="10" parent="3" name="message">
+      <ObjectId>93211</ObjectId>
+      <StateNumber>14408</StateNumber>
+    </table>
+    <table id="11" parent="3" name="user_role">
+      <ObjectId>93219</ObjectId>
+      <StateNumber>14405</StateNumber>
+    </table>
+    <table id="12" parent="3" name="usr">
+      <ObjectId>93222</ObjectId>
+      <StateNumber>14408</StateNumber>
+    </table>
+    <column id="13" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14398</StateNumber>
+    </column>
+    <column id="14" parent="10" name="tag">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>14398</StateNumber>
+    </column>
+    <column id="15" parent="10" name="text">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>14398</StateNumber>
+    </column>
+    <column id="16" parent="10" name="user_id">
+      <Position>5</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>14407</StateNumber>
+    </column>
+    <index id="17" parent="10" name="message_pkey">
+      <ObjectId>93217</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="18" parent="10" name="message_pkey">
+      <ObjectId>93218</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>message_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="19" parent="10" name="fk70bv6o4exfe3fbrho7nuotopf">
+      <ObjectId>93235</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableName>usr</RefTableName>
+      <RefKeyName>usr_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="20" parent="11" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14403</StateNumber>
+    </column>
+    <column id="21" parent="11" name="roles">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>14403</StateNumber>
+    </column>
+    <foreign-key id="22" parent="11" name="fkfpm8swft53ulq2hl11yplpr5">
+      <ObjectId>93230</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableName>usr</RefTableName>
+      <RefKeyName>usr_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="23" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14404</StateNumber>
+    </column>
+    <column id="24" parent="12" name="active">
+      <Position>2</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14404</StateNumber>
+    </column>
+    <column id="25" parent="12" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>14404</StateNumber>
+    </column>
+    <column id="26" parent="12" name="username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>14404</StateNumber>
+    </column>
+    <index id="27" parent="12" name="usr_pkey">
+      <ObjectId>93228</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="12" name="usr_pkey">
+      <ObjectId>93229</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>usr_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
